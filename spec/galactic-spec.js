@@ -19,4 +19,10 @@ describe('Age', function () {
     expect(Math.floor(testBirthday.mercuryAge(age))).toEqual(116);
   });
 
+  it('Should test if age converted in Venus years (0.62 Earth years) is accurate', function () {
+    const testBirthday = new AgeCalculator('July 17, 1990');
+    const age = testBirthday.checkBirthdate();
+    expect(Math.floor(testBirthday.venusAge(age))).toEqual(45);
+  });
+
 });

@@ -36,7 +36,7 @@ export class AgeCalculator {
     return (age / 0.24);
   }
 
-  mercuryAge(age) {
-    return (age / 0.24);
+  venusAge(age) {
+    return (age / 0.62);
   }
 }
