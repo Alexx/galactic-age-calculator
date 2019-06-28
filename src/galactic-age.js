@@ -5,14 +5,20 @@ export class AgeCalculator {
   }
 
   checkBirthdate(date) {
-    console.log(this.date);
-    const todaysDate = new Date(this.date);
+    const todaysDate = new Date();
     const inputtedBirthday = new Date(this.date);
+
+    const currentYear = todaysDate.getFullYear();
+    const currentMonth = todaysDate.getMonth();
+    const currentDay = todaysDate.getDay();
+
     const birthYear = inputtedBirthday.getFullYear();
     const birthMonth = inputtedBirthday.getMonth();
     const birthDay = inputtedBirthday.getDay();
+    
+    let age = currentYear - birthYear;
 
-    return inputtedBirthday;
+    return age;
   }
 
 }
