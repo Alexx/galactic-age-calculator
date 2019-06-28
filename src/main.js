@@ -11,9 +11,11 @@ function displayGalacticAges(person, age, averageLife, planets) {
     let yearsLeft = person.lifeExpectency(age, averageLife, planet);
 
     if (yearsLeft > 0) {
-      console.log('You have approximately ' + yearsLeft + ' years left to live on ' + planet + '.');
+      const literal = `You have approximately ${yearsLeft} years left to live on ${planet}.`;
+      console.log(literal);
     } else {
-      console.log('You have lived ' + Math.abs(yearsLeft) + ' past your expected life expectency!');
+      const literal = `You have lived ${Math.abs(yearsLeft)} years past your expected life expectency!`;
+      console.log(literal);
     }
   });
 }
@@ -22,7 +24,7 @@ $(document).ready(function () {
   const planetsList = ['Mercury', 'Venus', 'Mars', 'Jupiter'];
 
   //Enter your birthdate below
-  const userBirthDate = 'July 17, 1890';
+  const userBirthDate = 'July 17, 1990';
 
   //Enter your expected life span below
   const averageLifeSpan = 80;
