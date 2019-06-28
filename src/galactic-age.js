@@ -31,4 +31,8 @@ export class AgeCalculator {
       return 'invalid date inputted';
     }
   }
+
+  mercuryAge(age) {
+    return (age * 0.24);
+  }
 }
