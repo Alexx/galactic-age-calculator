@@ -13,11 +13,15 @@ _This is a web application that takes in a user's birth date, then returns how o
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
 | Should return an age based on inputed birth date | July 17, 1990 | 28 |
-| Should reject an input of a future date | August 21, 2020 | 'invalid date inputted' |
-| Should return age converted in Mercury years (0.24 Earth years) | 28 | 116 |
-| Should return age converted in Venus years (0.62 Earth years) | 28 | 45 |
-| Should return age converted in Mars years (1.88 Earth years) | 28 | 14 |
-| Should return age converted in Jupiter years (11.86 Earth years) | 28 | 2 | 
+| Should reject an input of a future date | August 25, 2049 | 'invalid date inputted' |
+| Should return age converted in Mercury years (0.24 Earth years) | 28, "Mercury" | 116 |
+| Should return age converted in Venus years (0.62 Earth years) | 28, "Venus" | 45 |
+| Should return age converted in Mars years (1.88 Earth years) | 28, "Mars" | 14 |
+| Should return age converted in Jupiter years (11.86 Earth years) | 28, "Jupiter" | 2 |
+| Should return years left on Mercury (average age 80) | 28, 80, "Mercury" | 216 |
+| Should return years left on Venus (average age 80) | 28, 80, "Venus" | 83 |
+| Should return years left on Mars (average age 80) | 28, 80, "Mars" | 27 |
+| Should return years left on Jupiter (average age 80) | 28, 80, "Jupiter" | 4 |
 
 ## Setup/Installation
 

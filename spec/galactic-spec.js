@@ -9,25 +9,30 @@ describe('Age', function () {
   });
 
   it('Should test for and reject an age based on a future date', function () {
-    const testFutureBirthday = new AgeCalculator('July 17, 2049');
+    const testFutureBirthday = new AgeCalculator('August 25, 2049');
     const futureAge = testFutureBirthday.checkBirthdate();
     expect(testBirthday.checkValidAge(futureAge)).toEqual('invalid date inputted');
   });
 
+  //Galactic age conversions
   it('Should test if age converted in Mercury years (0.24 Earth years) is accurate', function () {
-    expect(Math.floor(testBirthday.galacticAge(age, 'Mercury'))).toEqual(116);
+    expect(testBirthday.galacticAge(age, 'Mercury')).toEqual(116);
   });
 
   it('Should test if age converted in Venus years (0.62 Earth years) is accurate', function () {
-    expect(Math.floor(testBirthday.galacticAge(age, 'Venus'))).toEqual(45);
+    expect(testBirthday.galacticAge(age, 'Venus')).toEqual(45);
   });
 
   it('Should test if age converted in Mars years (1.88 Earth years) is accurate', function () {
-    expect(Math.floor(testBirthday.galacticAge(age, 'Mars'))).toEqual(14);
+    expect(testBirthday.galacticAge(age, 'Mars')).toEqual(14);
   });
 
   it('Should test if age converted in Jupiter years (1.88 Earth years) is accurate', function () {
-    expect(Math.floor(testBirthday.galacticAge(age, 'Jupiter'))).toEqual(2);
+    expect(testBirthday.galacticAge(age, 'Jupiter')).toEqual(2);
   });
 
+  //Life expectency conversions
+  it('Should test if age converted in Jupiter years (1.88 Earth years) is accurate', function () {
+    expect(testBirthday.lifeExpectency(age, 80, 'Mercury')).toEqual(216);
+  });
 });

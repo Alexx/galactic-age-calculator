@@ -5,6 +5,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 $(document).ready(function () {
-  var userBirthdate = new AgeCalculator('July 17, 1990');
+  var userBirthdate = new AgeCalculator('August 25, 2049');
   const age = userBirthdate.checkBirthdate();
 });

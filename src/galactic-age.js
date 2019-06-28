@@ -50,11 +50,28 @@ export class AgeCalculator {
       default:
         newAge = 'Never heard of that planet...';
     }
-    return newAge;
+    return Math.floor(newAge);
 
   }
 
-  lifeExpectency(age) {
-
+  lifeExpectency(age, averageLife, planet) {
+    let yearsLeft;
+    switch (planet) {
+      case 'Mercury':
+        yearsLeft = ((averageLife - age) / 0.24);
+        break;
+      case 'Venus':
+        yearsLeft = ((averageLife - age) / 0.62);
+        break;
+      case 'Mars':
+        yearsLeft = ((averageLife - age) / 1.88);
+        break;
+      case 'Jupiter':
+        yearsLeft = ((averageLife - age) / 11.86);
+        break;
+      default:
+        yearsLeft = 'Never heard of that planet...';
+    }
+    return Math.floor(yearsLeft);
   }
 }
