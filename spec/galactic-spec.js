@@ -25,4 +25,10 @@ describe('Age', function () {
     expect(Math.floor(testBirthday.venusAge(age))).toEqual(45);
   });
 
+  it('Should test if age converted in Mars years (1.88 Earth years) is accurate', function () {
+    const testBirthday = new AgeCalculator('July 17, 1990');
+    const age = testBirthday.checkBirthdate();
+    expect(Math.floor(testBirthday.marsAge(age))).toEqual(14);
+  });
+
 });
