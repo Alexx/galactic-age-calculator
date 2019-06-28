@@ -27,8 +27,10 @@ export class AgeCalculator {
   }
 
   checkValidAge(age) {
-    if (age < 0) {
-      return 'invalid date inputted';
+    if (age >= 0) {
+      return true;
+    } else {
+      console.log('invalid date inputted');
     }
   }
 

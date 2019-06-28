@@ -8,7 +8,7 @@ function displayGalacticAges(person, age, averageLife, planets) {
   planets.forEach(function (planet) {
     console.log('Your age on planet ' + planet + ' is ' + person.galacticAge(age, planet) + '.');
 
-    let yearsLeft = person.lifeExpectency(age, averageLife, planet);
+    const yearsLeft = person.lifeExpectency(age, averageLife, planet);
 
     if (yearsLeft > 0) {
       const literal = `You have approximately ${yearsLeft} years left to live on ${planet}.`;
@@ -29,8 +29,10 @@ $(document).ready(function () {
   //Enter your expected life span below
   const averageLifeSpan = 80;
 
-  let user = new AgeCalculator(userBirthDate);
-  const age = user.checkBirthdate();
+  const user = new AgeCalculator(userBirthDate);
+  const userAge = user.checkBirthdate();
 
-  displayGalacticAges(user, age, averageLifeSpan, planetsList);
+  if (user.checkValidAge(userAge)) {
+    displayGalacticAges(user, userAge, averageLifeSpan, planetsList);
+  }
 });
