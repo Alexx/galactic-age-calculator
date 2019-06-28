@@ -8,17 +8,21 @@ export class AgeCalculator {
     const todaysDate = new Date();
     const inputtedBirthday = new Date(this.date);
 
-    const currentYear = todaysDate.getFullYear();
+    let age = todaysDate.getFullYear() - inputtedBirthday.getFullYear();
+    
     const currentMonth = todaysDate.getMonth();
     const currentDay = todaysDate.getDay();
 
-    const birthYear = inputtedBirthday.getFullYear();
     const birthMonth = inputtedBirthday.getMonth();
     const birthDay = inputtedBirthday.getDay();
-    
-    let age = currentYear - birthYear;
 
-    return age;
+    const passedMonth = currentMonth - birthMonth;
+    const passedDay = currentDay - birthDay;
+
+    if (passedMonth < 0 || (passedMonth === 0 && todaysDate < inputtedBirthday)) {
+      return age - 1;
+    } else {
+      return age;
+    }
   }
-
 }
