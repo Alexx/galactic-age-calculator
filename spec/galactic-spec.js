@@ -32,7 +32,19 @@ describe('Age', function () {
   });
 
   //Life expectency conversions
-  it('Should test if age converted in Jupiter years (1.88 Earth years) is accurate', function () {
+  it('Should test if years left on Mercury years (average age 80) is accurate', function () {
     expect(testBirthday.lifeExpectency(age, 80, 'Mercury')).toEqual(216);
+  });
+
+  it('Should test if years left on Venus years (average age 80) is accurate', function () {
+    expect(testBirthday.lifeExpectency(age, 80, 'Venus')).toEqual(83);
+  });
+
+  it('Should test if years left on Mars years (average age 80) is accurate', function () {
+    expect(testBirthday.lifeExpectency(age, 80, 'Mars')).toEqual(27);
+  });
+
+  it('Should test if years left on Jupiter years (average age 80) is accurate', function () {
+    expect(testBirthday.lifeExpectency(age, 80, 'Jupiter')).toEqual(4);
   });
 });
