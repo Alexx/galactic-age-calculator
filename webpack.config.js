@@ -17,7 +17,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Webpack Template', //CHANGE THIS TITLE
+      title: 'Galactic Age Calculator',
       template: './src/index.html',
       inject: 'body',
     }),
@@ -40,12 +40,12 @@ module.exports = {
         test: /\.js$/,
         exclude: [
           /node_modules/,
-          /spec/
+          /spec/,
         ],
-        loader: "babel-loader",
+        loader: 'babel-loader',
         options: {
-          presets: ['es2015']
-        }
+          presets: ['es2015'],
+        },
       },
     ],
   },
