@@ -33,6 +33,10 @@ export class AgeCalculator {
   }
 
   mercuryAge(age) {
-    return (age * 0.24);
+    return (age / 0.24);
+  }
+
+  mercuryAge(age) {
+    return (age / 0.24);
   }
 }

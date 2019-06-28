@@ -16,7 +16,7 @@ describe('Age', function () {
   it('Should test if age converted in Mercury years (0.24 Earth years) is accurate', function () {
     const testBirthday = new AgeCalculator('July 17, 1990');
     const age = testBirthday.checkBirthdate();
-    expect(testBirthday.mercuryAge(age)).toEqual(6.72);
+    expect(Math.floor(testBirthday.mercuryAge(age))).toEqual(116);
   });
 
 });
