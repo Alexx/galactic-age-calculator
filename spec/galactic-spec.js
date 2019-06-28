@@ -15,19 +15,19 @@ describe('Age', function () {
   });
 
   it('Should test if age converted in Mercury years (0.24 Earth years) is accurate', function () {
-    expect(Math.floor(testBirthday.mercuryAge(age))).toEqual(116);
+    expect(Math.floor(testBirthday.galacticAge(age, 'Mercury'))).toEqual(116);
   });
 
   it('Should test if age converted in Venus years (0.62 Earth years) is accurate', function () {
-    expect(Math.floor(testBirthday.venusAge(age))).toEqual(45);
+    expect(Math.floor(testBirthday.galacticAge(age, 'Venus'))).toEqual(45);
   });
 
   it('Should test if age converted in Mars years (1.88 Earth years) is accurate', function () {
-    expect(Math.floor(testBirthday.marsAge(age))).toEqual(14);
+    expect(Math.floor(testBirthday.galacticAge(age, 'Mars'))).toEqual(14);
   });
 
   it('Should test if age converted in Jupiter years (1.88 Earth years) is accurate', function () {
-    expect(Math.floor(testBirthday.jupiterAge(age))).toEqual(2);
+    expect(Math.floor(testBirthday.galacticAge(age, 'Jupiter'))).toEqual(2);
   });
 
 });

@@ -1,12 +1,12 @@
 export class AgeCalculator {
   constructor(date) {
-    this.date = date;
+    this.birthdate = date;
 
   }
 
   checkBirthdate() {
     const todaysDate = new Date();
-    const inputtedBirthday = new Date(this.date);
+    const inputtedBirthday = new Date(this.birthdate);
 
     let age = todaysDate.getFullYear() - inputtedBirthday.getFullYear();
 
@@ -32,19 +32,29 @@ export class AgeCalculator {
     }
   }
 
-  mercuryAge(age) {
-    return (age / 0.24);
+  galacticAge(age, planet) {
+    let newAge;
+    switch (planet) {
+      case 'Mercury':
+        newAge = (age / 0.24);
+        break;
+      case 'Venus':
+        newAge = (age / 0.62);
+        break;
+      case 'Mars':
+        newAge = (age / 1.88);
+        break;
+      case 'Jupiter':
+        newAge = (age / 11.86);
+        break;
+      default:
+        newAge = 'Never heard of that planet...';
+    }
+    return newAge;
+
   }
 
-  venusAge(age) {
-    return (age / 0.62);
-  }
+  lifeExpectency(age) {
 
-  marsAge(age) {
-    return (age / 1.88);
-  }
-
-  jupiterAge(age) {
-    return (age / 11.86);
   }
 }
