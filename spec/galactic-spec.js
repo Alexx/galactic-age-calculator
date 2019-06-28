@@ -26,4 +26,8 @@ describe('Age', function () {
     expect(Math.floor(testBirthday.marsAge(age))).toEqual(14);
   });
 
+  it('Should test if age converted in Jupiter years (1.88 Earth years) is accurate', function () {
+    expect(Math.floor(testBirthday.jupiterAge(age))).toEqual(2);
+  });
+
 });

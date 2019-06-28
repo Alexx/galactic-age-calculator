@@ -43,4 +43,8 @@ export class AgeCalculator {
   marsAge(age) {
     return (age / 1.88);
   }
+
+  jupiterAge(age) {
+    return (age / 11.86);
+  }
 }
