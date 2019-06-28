@@ -39,6 +39,10 @@ Step 6: Open the browser console
 
 Step 7: Input your birthdate and life expectency in main.js
 
+or view on GitHub Pages linked below
+
+_[GitHub Pages](http://alexx.github.io/galactic-age-calculator/)_
+
 ## Technologies Used
 
 _HTML_
