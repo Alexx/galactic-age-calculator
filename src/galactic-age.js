@@ -9,7 +9,7 @@ export class AgeCalculator {
     const inputtedBirthday = new Date(this.date);
 
     let age = todaysDate.getFullYear() - inputtedBirthday.getFullYear();
-    
+
     const currentMonth = todaysDate.getMonth();
     const currentDay = todaysDate.getDay();
 
