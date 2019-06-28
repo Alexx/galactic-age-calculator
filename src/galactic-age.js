@@ -4,7 +4,7 @@ export class AgeCalculator {
 
   }
 
-  checkBirthdate(date) {
+  checkBirthdate() {
     const todaysDate = new Date();
     const inputtedBirthday = new Date(this.date);
 
@@ -23,6 +23,12 @@ export class AgeCalculator {
       return age - 1;
     } else {
       return age;
+    }
+  }
+
+  checkValidAge(age) {
+    if (age < 0) {
+      return 'invalid date inputted';
     }
   }
 }
