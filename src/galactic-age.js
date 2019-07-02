@@ -10,21 +10,30 @@ export class AgeCalculator {
 
     let age = todaysDate.getFullYear() - inputtedBirthday.getFullYear();
 
-    const passedMonth = todaysDate.getMonth() - inputtedBirthday.getMonth();
-    const passedDay = todaysDate.getDay() - inputtedBirthday.getDay();
+    const currentMonth = todaysDate.getMonth();
+    const currentDay = todaysDate.getDay();
 
-    if (passedMonth < 0 || (passedMonth === 0 && todaysDate < inputtedBirthday)) {
+    const birthMonth = inputtedBirthday.getMonth();
+    const birthDay = inputtedBirthday.getDay();
+
+    const passedMonth = currentMonth - birthMonth;
+    const passedDay = currentDay - birthDay;
+
+    if (passedMonth < 0 || (passedMonth === 0 && todaysDate > inputtedBirthday)) {
+      this.age = age - 1;
       return age - 1;
     } else {
+      this.age = age;
       return age;
     }
   }
 
-  checkValidAge(age) {
-    if (age >= 0) {
+  checkValidAge() {
+    console.log(`THIS RAN THIS RAN THIS RAN THIS RAN THIS RAN ${this.age}`);
+    if (this.age >= 0) {
       return true;
     } else {
-      console.log('invalid date inputted');
+      return ('invalid date inputted');
     }
   }
 
@@ -32,19 +41,19 @@ export class AgeCalculator {
     let newAge;
     switch (planet) {
       case 'Mercury':
-        newAge = (age / 0.24);
-        break;
+      newAge = (age / 0.24);
+      break;
       case 'Venus':
-        newAge = (age / 0.62);
-        break;
+      newAge = (age / 0.62);
+      break;
       case 'Mars':
-        newAge = (age / 1.88);
-        break;
+      newAge = (age / 1.88);
+      break;
       case 'Jupiter':
-        newAge = (age / 11.86);
-        break;
+      newAge = (age / 11.86);
+      break;
       default:
-        newAge = 'Never heard of that planet...';
+      newAge = 'Never heard of that planet...';
     }
     return Math.floor(newAge);
 
@@ -54,19 +63,19 @@ export class AgeCalculator {
     let yearsLeft;
     switch (planet) {
       case 'Mercury':
-        yearsLeft = ((averageLife - age) / 0.24);
-        break;
+      yearsLeft = ((averageLife - age) / 0.24);
+      break;
       case 'Venus':
-        yearsLeft = ((averageLife - age) / 0.62);
-        break;
+      yearsLeft = ((averageLife - age) / 0.62);
+      break;
       case 'Mars':
-        yearsLeft = ((averageLife - age) / 1.88);
-        break;
+      yearsLeft = ((averageLife - age) / 1.88);
+      break;
       case 'Jupiter':
-        yearsLeft = ((averageLife - age) / 11.86);
-        break;
+      yearsLeft = ((averageLife - age) / 11.86);
+      break;
       default:
-        yearsLeft = 'Never heard of that planet...';
+      yearsLeft = 'Never heard of that planet...';
     }
     return Math.floor(yearsLeft);
   }

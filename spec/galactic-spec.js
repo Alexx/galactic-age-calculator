@@ -11,7 +11,7 @@ describe('Age', function () {
   it('Should test for and reject an age based on a future date', function () {
     const testFutureBirthday = new AgeCalculator('August 25, 2049');
     const futureAge = testFutureBirthday.checkBirthdate();
-    expect(testBirthday.checkValidAge(futureAge)).toEqual('invalid date inputted');
+    expect(testFutureBirthday.checkValidAge()).toEqual('invalid date inputted');
   });
 
   //Galactic age conversions
