@@ -29,7 +29,6 @@ export class AgeCalculator {
   }
 
   checkValidAge() {
-    console.log(`THIS RAN THIS RAN THIS RAN THIS RAN THIS RAN ${this.age}`);
     if (this.age >= 0) {
       return true;
     } else {
